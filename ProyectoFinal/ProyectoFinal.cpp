@@ -105,6 +105,7 @@ Model Katana;
 Model GargantuaC;
 Model GargantuaA;
 Model PlatoFideos, PlatoNoFideos;
+Model Creation_Laser;
 
 
 //TOBI
@@ -436,6 +437,8 @@ int main()
 	Cabeza.LoadModel("Models/Cabeza.obj");
 	PlatoNoFideos = Model();
 	PlatoNoFideos.LoadModel("Models/Plato_sinFideos.obj");
+	Creation_Laser = Model();
+	Creation_Laser.LoadModel("Models/Laser.obj");
 
 	//Snitch jerarquía
 	Snitch = Model();
@@ -685,9 +688,8 @@ int main()
 		glm::mat4 model(1.0);
 		glm::mat4 modelaux(1.0);
 		glm::mat4 modelBiju(1.0);
-		glm::vec3 color = glm::vec3(1.0f, 1.0f, 1.0f);
+		glm::vec3 color = glm::vec3(1.0f, 1.0f, 1.0f), colorEsfera = glm::vec3(0.0f, 1.0f, 0.0f);
 		glm::vec2 toffset = glm::vec2(0.0f, 0.0f);
-
 
 		/*---------------------  Piso  --------------------*/
 		model = glm::mat4(1.0);
@@ -711,14 +713,19 @@ int main()
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[3]->RenderMesh();
 
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 2.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Creation_Laser.RenderModel();
 
 		/*------------------ Gargantua ------------------------------*/
 		if (xg >= 0.0f) {
-			xg -= 0.2;
+			xg -= 0.02;
 			zg += 0.32;
 		}
 		if (gC <= 35.0f) {
-			gC+=0.005f;
+			gC+=0.0005f;
 		}
 		if (angulo < 360) angulo += 1.f;
 		else angulo = 0.0f;
