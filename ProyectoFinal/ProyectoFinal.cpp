@@ -464,12 +464,12 @@ int main()
 
 	//Se coloca el siguiente horario
 	std::vector<std::string> skyboxFacesDia;
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_RT.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_LT.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_DT.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_UT.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_LT.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Aldea_FT.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Right.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Left.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Down.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Up.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Left.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Front.tga");
 	skyboxDia = Skybox(skyboxFacesDia);
 
 	Material_brillante = Material(4.0f, 256);
