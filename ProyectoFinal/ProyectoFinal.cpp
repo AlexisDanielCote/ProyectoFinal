@@ -713,14 +713,6 @@ int main()
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[3]->RenderMesh();
 
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(-200.0f, 130.0f, -400.0f));
-		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-		model = glm::rotate(model, 5 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, 20 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Creation_Laser.RenderModel();
-
 		/*------------------ Gargantua ------------------------------*/
 		if (xg >= 0.0f) {
 			xg -= 0.02;
@@ -849,6 +841,39 @@ int main()
 			model = glm::rotate(model, -150 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			DeathStar.RenderModel();
+
+			//Creation Laser
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-185.0f, 160.0f, -370.0f));
+			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+			model = glm::rotate(model, 45 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
+			model = glm::rotate(model, 20 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Creation_Laser.RenderModel();
+
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-195.0f, 120.0f, -385.0f));
+			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+			model = glm::rotate(model, -15 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
+			model = glm::rotate(model, -10 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Creation_Laser.RenderModel();
+
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-193.0f, 150.0f, -370.0f));
+			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+			model = glm::rotate(model, -25 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Creation_Laser.RenderModel();
+
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-180.0f, 150.0f, -380.0f));
+			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+			model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+			model = glm::rotate(model, -75 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Creation_Laser.RenderModel();
 
 			/*--------------------- KUNAI ---------------------------------*/
 			model = glm::mat4(1.0);
