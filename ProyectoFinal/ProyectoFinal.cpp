@@ -454,12 +454,12 @@ int main()
 
 	/* Aquí es para colocar el fondo de todo el proyecto además de colocar el día y la noche todo se carga*/
 	std::vector<std::string> skyboxFaces;
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_RT.tga");			//Right
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_LT.tga");			//Left
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_DT.tga");			//Down
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_UT.tga");			//Up
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_BT.tga");			//Back				//CA	
-	skyboxFaces.push_back("Textures/Skybox/Noche/Aldea_FT.tga");			//Front	256x256		
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_rt.tga");			//Right
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_lf.tga");			//Left
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_dn.tga");			//Down
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_up.tga");			//Up
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_bk.tga");			//Back				//CA	
+	skyboxFaces.push_back("Textures/Skybox/Noche/cupertin-lake_ft.tga");			//Front	256x256		
 	skyboxNoche = Skybox(skyboxFaces);
 
 	//Se coloca el siguiente horario
@@ -468,7 +468,7 @@ int main()
 	skyboxFacesDia.push_back("Textures/Skybox/Dia/Left.tga");
 	skyboxFacesDia.push_back("Textures/Skybox/Dia/Down.tga");
 	skyboxFacesDia.push_back("Textures/Skybox/Dia/Up.tga");
-	skyboxFacesDia.push_back("Textures/Skybox/Dia/Left.tga");
+	skyboxFacesDia.push_back("Textures/Skybox/Dia/Back.tga");
 	skyboxFacesDia.push_back("Textures/Skybox/Dia/Front.tga");
 	skyboxDia = Skybox(skyboxFacesDia);
 
