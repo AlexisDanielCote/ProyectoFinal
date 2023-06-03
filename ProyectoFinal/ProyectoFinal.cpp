@@ -106,6 +106,7 @@ Model GargantuaC;
 Model GargantuaA;
 Model PlatoFideos, PlatoNoFideos;
 Model Creation_Laser;
+Model Laser;
 
 
 //TOBI
@@ -357,6 +358,8 @@ int main()
 	int x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12;
 	int y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12;
 	int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, z11, z12;
+	float Crece_rayo = 0.0;
+	float MovRayX = 0.0f, MovRayY = 0.0f, MovRayZ = 0.0f;
 
 	bool Desaparecer = false;
 
@@ -439,6 +442,8 @@ int main()
 	PlatoNoFideos.LoadModel("Models/Plato_sinFideos.obj");
 	Creation_Laser = Model();
 	Creation_Laser.LoadModel("Models/Laser.obj");
+	Laser = Model();
+	Laser.LoadModel("Models/Laser2.obj");
 
 	//Snitch jerarquía
 	Snitch = Model();
@@ -715,11 +720,11 @@ int main()
 
 		/*------------------ Gargantua ------------------------------*/
 		if (xg >= 0.0f) {
-			xg -= 0.02;
+			xg -= 0.2;
 			zg += 0.32;
 		}
 		if (gC <= 35.0f) {
-			gC+=0.0005f;
+			gC+=0.005f;
 		}
 		if (angulo < 360) angulo += 1.f;
 		else angulo = 0.0f;
@@ -822,7 +827,7 @@ int main()
 
 			/*---------------------------PLATO FIDEO-------------------------------*/
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(30.0f, 30.0f, -30.0f));
+			model = glm::translate(model, glm::vec3(30.0f, 28.2f, -30.0f));
 			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			PlatoNoFideos.RenderModel();
@@ -841,39 +846,58 @@ int main()
 			model = glm::rotate(model, -150 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			DeathStar.RenderModel();
+			if (Crece_rayo <= 5.0f) {
+				//Creation Laser
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 160.0f, -370.0f));
+				model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+				model = glm::rotate(model, 45 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
+				model = glm::rotate(model, 20 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Creation_Laser.RenderModel();
 
-			//Creation Laser
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(-185.0f, 160.0f, -370.0f));
-			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
-			model = glm::rotate(model, 45 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
-			model = glm::rotate(model, 20 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Creation_Laser.RenderModel();
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-195.0f, 120.0f, -385.0f));
+				model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+				model = glm::rotate(model, -15 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
+				model = glm::rotate(model, -10 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Creation_Laser.RenderModel();
 
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(-195.0f, 120.0f, -385.0f));
-			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
-			model = glm::rotate(model, -15 * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
-			model = glm::rotate(model, -10 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Creation_Laser.RenderModel();
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-193.0f, 150.0f, -370.0f));
+				model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+				model = glm::rotate(model, -25 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Creation_Laser.RenderModel();
 
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(-193.0f, 150.0f, -370.0f));
-			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
-			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-			model = glm::rotate(model, -25 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Creation_Laser.RenderModel();
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 150.0f, -380.0f));
+				model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
+				model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+				model = glm::rotate(model, -75 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Creation_Laser.RenderModel();
 
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(-180.0f, 150.0f, -380.0f));
-			model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
-			model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-			model = glm::rotate(model, -75 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Creation_Laser.RenderModel();
+				Crece_rayo += 0.01;
+				model = glm::mat4(1.0f);
+				model = glm::translate(model, glm::vec3(-180.0f, 150.0f, -360.0f));
+				model = glm::scale(model, glm::vec3(Crece_rayo, Crece_rayo, Crece_rayo));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Laser.RenderModel();
+			}
+			else if (Crece_rayo > 5.0f) {
+				MovRayY = MovRayX = MovRayZ -= 0.3;
+				model = glm::mat4(1.0f);
+				model = glm::translate(model, glm::vec3(-180.0f - MovRayX, 150.0f + MovRayY, -360.0f - MovRayZ));
+				model = glm::scale(model, glm::vec3(Crece_rayo, Crece_rayo, Crece_rayo));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Laser.RenderModel();
+			}
+			if (Crece_rayo > 5.0f && MovRayY <= -150.0f) {
+				Crece_rayo = MovRayX = MovRayY = MovRayZ = 0.0f;
+			}
 
 			/*--------------------- KUNAI ---------------------------------*/
 			model = glm::mat4(1.0);
@@ -1409,6 +1433,7 @@ int main()
 				y1 = y2 = y3 = y4 = y5 = y6 = y7 = y8 = y9 = y10 = y11 = y12 = 0;
 				z1 = z2 = z3 = z4 = z5 = z6 = z7 = z8 = z9 = z10 = z11 = z12 = 0;
 				movBiju = 0.0f;
+				Crece_rayo = MovRayX = MovRayY = MovRayZ = 0.0f;
 			}
 		}
 		glUseProgram(0);
