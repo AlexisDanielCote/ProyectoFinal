@@ -1568,8 +1568,8 @@ int main()
 
 			/*------------------------- MUEBLE ----------------------------------*/
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(0.0f, 15.0f, 0.0f));
-			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0));
+			model = glm::translate(model, glm::vec3(150.0f, -2.0f, 55.0f));
+			model = glm::scale(model, glm::vec3(30.0f, 30.0f, 30.0));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Mueble.RenderModel();
 
@@ -1940,6 +1940,59 @@ int main()
 			if (x1 <= 170.0f && y1 <= 50.0f && z1 <= 200.0f)
 				restaurante.RenderModel();
 
+			/*------------------------- GLOBO TERRAQUEO ---------------------------*/
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(150.0f - x13, 29.2f - y13, 200.0f - z13));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			if (x13 <= 150.0f)
+				x13 += 1.0f;
+			if (y13 <= 29.2f)
+				y13 += 1.0f;
+			if (z13 <= 200.0f)
+				z13 += 1.0f;
+			if (x13 <= 150.0f && y13 <= 29.2f && z13 <= 200.0f)
+				GloboTerraqueo.RenderModel();
+
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(150.0f - x14, 29.2f - y14, 240.0f - z14));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			if (x14 <= 150.0f)
+				x14 += 1.0f;
+			if (y14 <= 29.2f)
+				y14 += 1.0f;
+			if (z14 <= 240.0f)
+				z14 += 1.0f;
+			if (x14 <= 150.0f && y14 <= 29.2f && z14 <= 240.0f)
+				GloboTerraqueo.RenderModel();
+
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(150.0f - x15, 29.2f - y15, 160.0f - z15));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			if (x15 <= 150.0f)
+				x15 += 1.0f;
+			if (y15 <= 29.2f)
+				y15 += 1.0f;
+			if (z15 <= 160.0f)
+				z15 += 1.0f;
+			if (x15 <= 150.0f && y15 <= 29.2f && z15 <= 160.0f)
+				GloboTerraqueo.RenderModel();
+
+			/*------------------------- MUEBLE ----------------------------------*/
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(150.0f - x16, -2.0f + y16 , 55.0f - z16));
+			model = glm::scale(model, glm::vec3(30.0f, 30.0f, 30.0));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			if (x16 <= 150.0f)
+				x16 += 1.0f;
+			if (y16 <= -2.0f)
+				y16 += 1.0f;
+			if (z16 <= 55.0f)
+				z16 += 1.0f;
+			if (x16 <= 150.0f && y16 <= -2.0f && z16 <= 55.0f)
+				Mueble.RenderModel();
 			
 			/*------------------ DEATHSTAR ------------------------------*/
 			model = glm::mat4(1.0);
