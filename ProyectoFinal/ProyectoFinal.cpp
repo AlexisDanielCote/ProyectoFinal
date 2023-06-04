@@ -108,6 +108,7 @@ Model PlatoFideos, PlatoNoFideos;
 Model Creation_Laser;
 Model Laser;
 Model GloboTerraqueo;
+Model Mueble;
 
 
 //TOBI
@@ -356,18 +357,18 @@ void animate(void)
 
 int main()
 {
-	int x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12;
-	int y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12;
-	int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, z11, z12;
+	int x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16;
+	int y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12, y13, y14, y15, y16;
+	int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, z11, z12, z13, z14, z15, z16;
 	int numero_plato = 1;
 	float Crece_rayo = 0.0;
 	float MovRayX = 0.0f, MovRayY = 0.0f, MovRayZ = 0.0f;
 
 	bool Desaparecer = false;
 
-	x1 = x2 = x3 = x4 = x5 = x6 = x7 = x8 = x9 = x10 = x11 = x12 = 0;
-	y1 = y2 = y3 = y4 = y5 = y6 = y7 = y8 = y9 = y10 = y11 = y12 = 0;
-	z1 = z2 = z3 = z4 = z5 = z6 = z7 = z8 = z9 = z10 = z11 = z12 = 0;
+	x1 = x2 = x3 = x4 = x5 = x6 = x7 = x8 = x9 = x10 = x11 = x12 = x13 = x14 = x15 = x16 = 0;
+	y1 = y2 = y3 = y4 = y5 = y6 = y7 = y8 = y9 = y10 = y11 = y12 = y13 = y14 = y15 = y16 = 0;
+	z1 = z2 = z3 = z4 = z5 = z6 = z7 = z8 = z9 = z10 = z11 = z12 = z13 = z14 = z15 = z16 = 0;
 
 	mainWindow = Window(1366, 768); // 1280, 1024 or 1024, 768
 	mainWindow.Initialise();
@@ -450,6 +451,8 @@ int main()
 	PlatoFideos.LoadModel("Models/Plato_comFideos.obj");
 	GloboTerraqueo = Model();
 	GloboTerraqueo.LoadModel("Models/GloboTerraqueo.obj");
+	Mueble = Model();
+	Mueble.LoadModel("Models/Mueble.obj");
 
 	//Snitch jerarquía
 	Snitch = Model();
@@ -1562,6 +1565,14 @@ int main()
 			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			GloboTerraqueo.RenderModel();
+
+			/*------------------------- MUEBLE ----------------------------------*/
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(0.0f, 15.0f, 0.0f));
+			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Mueble.RenderModel();
+
 			/* ------------------------------ Trebol ---------------------------*/
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(20.0f, 0.0f, -90.0f));
