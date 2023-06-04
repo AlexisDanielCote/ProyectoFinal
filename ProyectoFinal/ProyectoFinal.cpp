@@ -142,8 +142,6 @@ SpotLight spotLights[MAX_SPOT_LIGHTS];
 static const char* vShader = "shaders/shader_light.vert";
 // Fragment Shader
 static const char* fShader = "shaders/shader_light.frag";
-//PARA INPUT CON KEYFRAMES 
-void inputKeyframes(bool* keys);
 //cálculo del promedio de las normales para sombreado de Phong
 void calcAverageNormals(unsigned int* indices, unsigned int indiceCount, GLfloat* vertices, unsigned int verticeCount,
 	unsigned int vLength, unsigned int normalOffset)
@@ -262,97 +260,6 @@ void CreateShaders()
 	Shader *shader1 = new Shader();
 	shader1->CreateFromFiles(vShader, fShader);
 	shaderList.push_back(*shader1);
-}
-///////////////////////////////KEYFRAMES/////////////////////
-bool animacion = false;
-//NEW// Keyframes
-float posXavion = 2.0, posYavion = 5.0, posZavion = -3.0; //Estado inicial
-float	movAvion_x = 0.0f, movAvion_y = 0.0f;
-float giroAvion = 0;
-#define MAX_FRAMES 30
-int i_max_steps = 350;		//Fluides de la animación, más grande, mas fluido =! consume más recuros //Default 90
-int i_curr_steps = 5;
-typedef struct _frame
-{
-	//Variables para GUARDAR Key Frames
-	float movAvion_x;		//Variable para PosicionX
-	float movAvion_y;		//Variable para PosicionY
-	float movAvion_xInc;		//Variable para IncrementoX
-	float movAvion_yInc;		//Variable para IncrementoY
-	float giroAvion;
-	float giroAvionInc;
-}FRAME;
-
-FRAME KeyFrame[MAX_FRAMES];
-int FrameIndex = 5;			//introducir datos	Que son los 
-bool play = false;
-int playIndex = 0;
-
-void saveFrame(void)
-{
-
-	printf("frameindex %d\n", FrameIndex);
-
-
-	KeyFrame[FrameIndex].movAvion_x = movAvion_x;
-	KeyFrame[FrameIndex].movAvion_y = movAvion_y;
-	KeyFrame[FrameIndex].giroAvion = giroAvion;
-	//Almacenar los datos
-	//Opcion 1 idesal: Escribir en un archivo txt
-	//opcion 2 mas rapido: Imprimir a consola y copiar los datos y copiar un archivo txt
-	printf("KeyFrame[%d].movAvion_x = %f;\n",FrameIndex,movAvion_x);
-	FrameIndex++;
-}
-void resetElements(void)
-{
-
-	movAvion_x = KeyFrame[0].movAvion_x;
-	movAvion_y = KeyFrame[0].movAvion_y;
-	giroAvion = KeyFrame[0].giroAvion;
-}
-void interpolation(void)
-{
-	KeyFrame[playIndex].movAvion_xInc = (KeyFrame[playIndex + 1].movAvion_x - KeyFrame[playIndex].movAvion_x) / i_max_steps;
-	KeyFrame[playIndex].movAvion_yInc = (KeyFrame[playIndex + 1].movAvion_y - KeyFrame[playIndex].movAvion_y) / i_max_steps;
-	KeyFrame[playIndex].giroAvionInc = (KeyFrame[playIndex + 1].giroAvion - KeyFrame[playIndex].giroAvion) / i_max_steps;
-
-}
-void animate(void)
-{
-	//Movimiento del objeto
-	if (play)
-	{
-		if (i_curr_steps >= i_max_steps) //end of animation between frames?
-		{
-			playIndex++;
-			printf("playindex : %d\n", playIndex);
-			if (playIndex > FrameIndex - 2)	//end of total animation?
-			{
-				printf("Frame index= %d\n", FrameIndex);
-				printf("termina anim\n");
-				playIndex = 0;
-				play = false;
-			}
-			else //Next frame interpolations
-			{
-				//printf("entro aquí\n");
-				i_curr_steps = 0; //Reset counter
-				//Interpolation
-				interpolation();
-			}
-		}
-		else
-		{
-			//printf("se quedó aqui\n");
-			//printf("max steps: %f", i_max_steps);
-			//Draw animation
-			movAvion_x += KeyFrame[playIndex].movAvion_xInc;
-			movAvion_y += KeyFrame[playIndex].movAvion_yInc;
-			giroAvion += KeyFrame[playIndex].giroAvionInc;
-			i_curr_steps++;
-		}
-
-	}
 }
 
 int main()
@@ -560,38 +467,6 @@ int main()
 	GLuint uniformColor = 0;
 	glm::mat4 projection = glm::perspective(45.0f, (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 1000.0f);
 
-	glm::vec3 posblackhawk = glm::vec3(2.0f, 0.0f, 0.0f);
-	//KEYFRAMES DECLARADOS INICIALES
-	KeyFrame[0].movAvion_x = 0.0f;
-	KeyFrame[0].movAvion_y = 0.0f;
-	KeyFrame[0].giroAvion = 0;
-
-	KeyFrame[1].movAvion_x = 1.0f;
-	KeyFrame[1].movAvion_y = 2.0f;
-	KeyFrame[1].giroAvion = 0;
-
-	KeyFrame[2].movAvion_x = 2.0f;
-	KeyFrame[2].movAvion_y = 0.0f;
-	KeyFrame[2].giroAvion = 0;
-
-	KeyFrame[3].movAvion_x = 3.0f;
-	KeyFrame[3].movAvion_y = -2.0f;
-	KeyFrame[3].giroAvion = 0;
-
-	KeyFrame[4].movAvion_x = 4.0f;
-	KeyFrame[4].movAvion_y = 0.0f;
-	KeyFrame[4].giroAvion = 180.0f;
-
-
-	//Agregar Kefyrame[5] para que el avión regrese al inicio
-
-
-
-	//Para cargar esferas esto funcionaría como las primitivas geométricas
-	sp.init(); //inicializar esfera
-	sp.load();//enviar la esfera al shader
-
-
 	/*-----------------   Se declaran las variables snitch------------- */
 	offsetSnitch = 0.3f;
 	offsetAlas = 0.1;
@@ -619,11 +494,6 @@ int main()
 	zg = -500.0f;
 	gC = 0.0f;
 
-
-	/* Luces */
-	//fueraLuces = false;
-
-
 	////Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
 	{
@@ -635,9 +505,7 @@ int main()
 		glfwPollEvents();
 		camera.keyControl(mainWindow.getsKeys(), deltaTime);
 		camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
-		//para keyframes
-		inputKeyframes(mainWindow.getsKeys());
-		animate();
+		
 		// Clear the window
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -735,7 +603,7 @@ int main()
 		if (gC <= 35.0f) {
 			gC+=0.005f;
 		}
-		if (angulo < 360) angulo += 1.f;
+		if (angulo < 360) angulo += 1.0f;
 		else angulo = 0.0f;
 		model = glm::mat4(1.0);				//x	= 300f;		z=-500.0f;
 		model = glm::translate(model, glm::vec3(xg, 50.0f, zg));
@@ -2235,82 +2103,5 @@ int main()
 	}
 
 	return 0;
-}
-
-void inputKeyframes(bool* keys)
-{
-	if (keys[GLFW_KEY_SPACE])
-	{
-		if (reproduciranimacion < 1)
-		{
-			if (play == false && (FrameIndex > 1))
-			{
-				resetElements();
-				//First Interpolation				
-				interpolation();
-				play = true;
-				playIndex = 0;
-				i_curr_steps = 0;
-				reproduciranimacion++;
-				printf("\n presiona 0 para habilitar reproducir de nuevo la animación'\n");
-				habilitaranimacion = 0;
-
-			}
-			else
-			{
-				play = false;
-			}
-		}
-	}
-	if (keys[GLFW_KEY_0])
-	{
-		if (habilitaranimacion < 1)
-		{
-			reproduciranimacion = 0;
-		}
-	}
-
-	if (keys[GLFW_KEY_L])
-	{
-		if (guardoFrame < 1)
-		{
-			saveFrame();
-			//printf("movAvion_x es: %f\n", movAvion_x);
-			//printf("movAvion_y es: %f\n", movAvion_y);
-			printf(" \npresiona P para habilitar guardar otro frame'\n");
-			guardoFrame++;
-			reinicioFrame = 0;
-		}
-	}
-	if (keys[GLFW_KEY_P])
-	{
-		if (reinicioFrame < 1)
-		{
-			guardoFrame = 0;
-		}
-	}
-
-
-	if (keys[GLFW_KEY_1])
-	{
-		if (ciclo < 1)
-		{
-			//printf("movAvion_x es: %f\n", movAvion_x);
-			movAvion_x += 1.0f;
-			printf("\n movAvion_x es: %f\n", movAvion_x);
-			ciclo++;
-			ciclo2 = 0;
-			printf("\n reinicia con 2\n");
-		}
-
-	}
-	if (keys[GLFW_KEY_2])
-	{
-		if (ciclo2 < 1)
-		{
-			ciclo = 0;
-		}
-	}
-
 }
 
