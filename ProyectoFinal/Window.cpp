@@ -116,24 +116,13 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	{
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-	if (key == GLFW_KEY_Y)
+	if (key == GLFW_KEY_P)
 	{
-		theWindow-> muevex += 1.0;
+		theWindow->servir = true;
 	}
-	if (key == GLFW_KEY_U)
-	{
-		theWindow-> muevex -= 1.0;
+	if (key == GLFW_KEY_O) {
+		theWindow->servir = false;
 	}
-
-	if (key == GLFW_KEY_T) {
-			theWindow->tirar = true;
-			theWindow->numRandom = true;
-	}
-
-	if (key == GLFW_KEY_R) {
-		theWindow->reset = false;
-	}
-
 	if (key >= 0 && key < 1024)
 	{
 		if (action == GLFW_PRESS)
@@ -227,6 +216,7 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 		if (theWindow->rotar_cabeza >= -90.0f)
 			theWindow->rotar_cabeza -= 1.0f;
 	}
+
 	if (key == GLFW_KEY_Z)
 		theWindow->camara = 1;
 	if (key == GLFW_KEY_X)

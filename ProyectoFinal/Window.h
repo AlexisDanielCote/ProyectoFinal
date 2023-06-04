@@ -30,7 +30,7 @@ public:
 	GLfloat ARRIBA_cabeza() { return arriba_cabeza; }
 	GLfloat Rotar_Tobi() { return rotar_tobi; }
 	GLfloat Rotar_Cabeza() { return rotar_cabeza; }
-	GLfloat tipoCamara() { return camara; }
+	bool Servir_Platos() { return servir; }
 	
 	~Window();
 private: 
@@ -49,7 +49,7 @@ private:
 	GLfloat arriba_cabeza, rotar_tobi, rotar_cabeza;
 	int camara;
 
-	bool tirar;
+	bool tirar, servir = false;
 	bool mover = true, mover_lado = true;
 	bool numRandom;
 	bool reset;

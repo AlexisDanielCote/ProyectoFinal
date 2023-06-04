@@ -107,6 +107,7 @@ Model GargantuaA;
 Model PlatoFideos, PlatoNoFideos;
 Model Creation_Laser;
 Model Laser;
+Model GloboTerraqueo;
 
 
 //TOBI
@@ -358,6 +359,7 @@ int main()
 	int x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12;
 	int y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12;
 	int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, z11, z12;
+	int numero_plato = 1;
 	float Crece_rayo = 0.0;
 	float MovRayX = 0.0f, MovRayY = 0.0f, MovRayZ = 0.0f;
 
@@ -444,6 +446,10 @@ int main()
 	Creation_Laser.LoadModel("Models/Laser.obj");
 	Laser = Model();
 	Laser.LoadModel("Models/Laser2.obj");
+	PlatoFideos = Model();
+	PlatoFideos.LoadModel("Models/Plato_comFideos.obj");
+	GloboTerraqueo = Model();
+	GloboTerraqueo.LoadModel("Models/GloboTerraqueo.obj");
 
 	//Snitch jerarquía
 	Snitch = Model();
@@ -826,62 +832,736 @@ int main()
 			Mesa.RenderModel();
 
 			/*---------------------------PLATO FIDEO-------------------------------*/
-			//plato 1
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
-			
-			//plato 2
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
+			if (mainWindow.Servir_Platos() == true && Desaparecer==false) {
+				for (int i = 0; i < 200000000; i++) {
 
-			//plato 3
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
+				}
+				switch (numero_plato)
+				{
+				case 1:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 2;
+					break;
+				case 2:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 3;
+					break;
+				case 3:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 4;
+					break;
+				case 4:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 5;
+					break;
+				case 5:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 6;
+					break;
+				case 6:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 7;
+					break;
+				case 7:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 8;
+					break;
+				case 8:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 9;
+					Desaparecer = true;
+					break;
+				case 9:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 10;
+					break;
+				case 10:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 11;
+					break;
+				case 11:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 12;
+					break;
+				case 12:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 13;
+					break;
+				case 13:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 14;
+					break;
+				case 14:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 15;
+					break;
+				case 15:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoNoFideos.RenderModel();
+					numero_plato = 17;
+					break;
+				case 16:
+					//plato 1
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 2
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 3
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 4
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 5
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 6
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 7
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					//plato 8
+					model = glm::mat4(1.0);
+					model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+					model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+					glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+					PlatoFideos.RenderModel();
+					Desaparecer = true;
+					break;
+				}
+			}
+			if (Desaparecer == true) {
+				//plato 1
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(45.0f, 28.2f, -50.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 2
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(15.0f, 28.2f, -50.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 3
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(45.0f, 28.2f, -10.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 4
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 5
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 6
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 7
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+				//plato 8
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
+				model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				PlatoFideos.RenderModel();
+			}
+			if (mainWindow.Servir_Platos() == false) {
+				Desaparecer = false;
+				numero_plato = 1;
+			}
 
-			//plato 4
+			/*------------------------- GLOBO TERRAQUEO ---------------------------*/
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(15.0f, 28.2f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+			model = glm::translate(model, glm::vec3(150.0f, 29.2f, 200.0f));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
+			GloboTerraqueo.RenderModel();
 
-			//plato 5
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(115.0f, 28.2f, -50.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+			model = glm::translate(model, glm::vec3(150.0f, 29.2f, 240.0f));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
+			GloboTerraqueo.RenderModel();
 
-			//plato 6
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(145.0f, 28.2f, -50.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+			model = glm::translate(model, glm::vec3(150.0f, 29.2f, 160.0f));
+			model = glm::scale(model, glm::vec3(0.07f, 0.07f, 0.07f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
-
-			//plato 7
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(115.0f, 28.2f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
-
-			//plato 8
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(145.0f, 28.2f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			PlatoNoFideos.RenderModel();
-
+			GloboTerraqueo.RenderModel();
 			/* ------------------------------ Trebol ---------------------------*/
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(20.0f, 0.0f, -90.0f));
