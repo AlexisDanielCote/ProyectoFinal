@@ -1,0 +1,134 @@
+﻿  Camera.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Camera.cpp(21,19): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  DirectionalLight.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\DirectionalLight.cpp(18,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\DirectionalLight.cpp(19,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\DirectionalLight.cpp(21,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\DirectionalLight.cpp(22,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+  Light.cpp
+  Material.cpp
+  Mesh_tn.cpp
+  Model.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(16,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'const std::string'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(16,80): warning C4474: "printf": se pasaron demasiados argumentos para la cadena de formato
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(16,80): message : los marcadores de posición y sus parámetros esperan 1 argumentos variádicos, pero se proporcionaron 2
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(51,7): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(51,21): warning C4018: '<': no coinciden signed/unsigned
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(138,14): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Model.cpp(147,14): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string'
+  PointLight.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(28,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(29,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(30,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(32,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(33,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(34,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\PointLight.cpp(35,14): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+  ProyectoFinal.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(429,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(442,8): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(451,8): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(472,18): warning C4305: '=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(482,20): warning C4305: '=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(486,22): warning C4305: '=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(500,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(502,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(600,13): warning C4305: '-=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(601,14): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1492,23): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1500,39): warning C4305: '-=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1575,26): warning C4305: '-=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1583,26): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1606,31): warning C4305: '=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1759,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1760,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1777,43): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1778,48): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1781,22): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1803,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1805,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1807,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1817,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1819,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1821,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1830,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1832,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1834,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1843,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1845,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1847,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1857,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1859,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1861,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1872,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1874,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1876,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1886,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1888,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1890,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1901,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1903,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1914,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1916,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1927,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1929,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1931,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1942,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1944,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1954,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1956,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1974,18): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1978,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1979,15): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1982,11): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1985,18): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1989,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(1990,15): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2042,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2043,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2056,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2058,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2066,43): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2067,48): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2070,22): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2080,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\ProyectoFinal.cpp(2082,12): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
+  Shader_light.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(215,75): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(215,26): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(214,91): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(214,42): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(228,98): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(228,62): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(228,24): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(227,70): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(227,24): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(226,88): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Shader_light.cpp(226,42): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+  Skybox.cpp
+  Sphere.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Sphere.cpp(39,13): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Sphere.cpp(43,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  SpotLight.cpp
+  Texture.cpp
+  Window.cpp
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(140,33): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(155,33): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(170,35): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(185,35): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(234,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(235,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(239,28): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(240,40): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(242,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(243,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\ProyectoFinal\Window.cpp(85): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
+  All 983 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  ProyectoFinal.vcxproj -> D:\Alexis Cote Uni\8vo Semestre\CGeIHC\PROYECTOFINAL\Release\ProyectoFinal.exe
